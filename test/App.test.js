@@ -1,12 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {shallow} from 'enzyme';
 import App from '../client/src/components/App.jsx';
 
 
+
+
 describe('Test App React Component', () => {
-  it('should render App component', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(<App />, div);
-    ReactDOM.unmountComponentAtNode(div);
-  });
-})
+
+    it('should render one <h1>', () => {
+      const wrapper = shallow(<App />)
+        expect(wrapper.find('h1')).toHaveLength(1);
+    });
+
+});
