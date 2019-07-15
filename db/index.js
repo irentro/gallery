@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+
 const mongoUri = 'mongodb://localhost/gallery';
 const Gallery = require('./Gallery.js');
 
