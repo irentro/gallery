@@ -1,0 +1,280 @@
+body {
+  display: flex;
+  background-color: white;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 16px;
+}
+
+li {
+  list-style-type: none;
+}
+
+p {
+  font-weight: 400;
+  font-size: 19px;
+  color: #484848;
+}
+
+
+/* CAROUSEL */
+
+.carousel {
+  margin: 20px;
+  padding-left: 40px;
+  display: flex;
+}
+.wrapperCarousel {
+  display: grid;
+  grid-template-columns: 80px 770px 80px 20px;
+  grid-gap: 1px;
+}
+.photoAndInfo {
+  display: inline-block;
+  grid-column: 4;
+  width: 150px;
+}
+
+.leftBtn {
+  display: inline-block;
+  border-right: 3px solid black;
+  border-bottom: 3px solid black;
+  width: 10px;
+  height: 10px;
+  transform: rotate(-225deg);
+  margin: auto;
+  padding: 3px;
+  cursor: pointer;
+}
+
+.rightBtn {
+  display: inline-block;
+  border-right: 3px solid black;
+  border-bottom: 3px solid black;
+  width: 10px;
+  height: 10px;
+  transform: rotate(-45deg);
+  margin: auto;
+  padding: 3px;
+  cursor: pointer;
+}
+
+.opacity {
+  opacity: 0.8 ;
+  transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s ;
+}
+
+.carouselImg {
+  width: 317px;
+  height: 211px;
+  border-radius: 4%;
+  grid-column: 2;
+  grid-row: 1;
+  transition: all 1s ease-in-out;
+}
+
+.close {
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.close:before, .close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: #333;
+}
+
+.close:before {
+  transform: rotate(45deg);
+}
+
+.close:after {
+  transform: rotate(-45deg);
+}
+
+.imgSlides {
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -ms-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+  opacity: 0.6;
+  border-spacing: 50px;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  vertical-align: bottom;
+  width: 48px;
+  height: 48px;
+  overflow: hidden;
+  border-width: 5px;
+  margin: 2px;
+  padding: 0px;
+  border-radius: 4px;
+}
+
+.imgSlides:hover {
+  opacity: 1;
+}
+
+.photoList {
+  display: flex;
+  flex-direction: row;
+  position: absolute !important;
+  list-style-type: none !important;
+  left: 0px !important;
+  transition: -ms-transform 0.3s ease-out 0s,
+  -webkit-transform 0.3s ease-out 0s, transform 0.3s ease-out 0s !important;
+  margin: 0px !important;
+  padding: 0px 0px 0px 8px !important;
+}
+
+.listingInfo {
+  display:inline-block;
+}
+
+.mainImg {
+  display:inline-block;
+  margin: auto;
+  transition: all 400ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s ;
+}
+
+.carouselImg {
+  height: 500px;
+  width: 750px;
+  cursor: pointer;
+}
+
+.photoSlider {
+  position: relative;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  height: 64px;
+  overflow: hidden;
+}
+
+
+/* PHOTO DISPLAY */
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 640px 320px 320px;
+  background-color: black;
+}
+
+.box:hover {
+  transform: scale(1.03);
+  transition: -ms-transform 450ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
+  -webkit-transform 450ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s, 
+  transform 450ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+}
+
+.viewPhotosBtn {
+  position: relative;
+  left: 1137px;
+  bottom: 88px;
+  box-shadow: 2px 2px 2px 1px #a9a7a7;
+  display: inline-block;
+  margin: 0px;
+  position: relative;
+  text-align: center;
+  color: #615f5f;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: normal;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  font-weight: 600;
+  border-width: 1px;
+  border-style: solid;
+  padding-left: 15px;
+  padding-right: 15px;
+  background: #ffffff;
+  border-color: transparent;
+}
+
+.topGallery {
+  box-shadow: 2px 2px 2px 1px #a9a7a7;
+  display: inline-block;
+  margin: 0px;
+  position: relative;
+  text-align: center;
+  color: #615f5f;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: normal;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  font-weight: 500;
+  border-width: 1px;
+  border-style: solid;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: #ffffff;
+  border-color: transparent ;
+
+}
+
+.heartBtn {
+  position: relative;
+  left: 1075px;
+  bottom: 415px;
+}
+
+.shareBtn {
+  position: relative;
+  left: 1050px;
+  bottom: 415px;
+}
+
+.box {
+  width: 317px;
+  height: 210px;
+  cursor: pointer;
+}
+
+.grid{
+  overflow: hidden;
+  transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+}
+
+.prim {
+  width: 637px;
+  height: 424px;
+
+}
+
+.a {
+  grid-column: 1;
+  grid-row: 1 / 3;
+}
+.b {
+  grid-column: 2 ;
+  grid-row: 1 ;
+}
+.c {
+  grid-column: 2 ;
+  grid-row: 2 ;
+}
+.d {
+  grid-column: 3;
+  grid-row: 1;
+}
+.e {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+
