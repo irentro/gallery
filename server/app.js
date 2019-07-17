@@ -11,6 +11,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
+app.use(express.static('client/dist'));
+
+
 app.get('/gallery/:listingid', (req, res) => {
   db.find({ listing_id: req.params.listingid }, (err, data) => {
     if (err) {

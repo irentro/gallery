@@ -39,7 +39,7 @@ class PhotoDisplay extends React.Component {
   render() {
     const { photos, showCarousel } = this.props;
     const { hovered } = this.state;
-    if (!photos[0]) {
+    if (!photos[0] || photos[0] === undefined) {
       return <div></div>;
     }
     let classForZooms = [[styles.grid, styles.a].join(' '), [styles.grid, styles.b].join(' '), [styles.grid, styles.c].join(' '), [styles.grid, styles.d].join(' '), [styles.grid, styles.e].join(' ')];
