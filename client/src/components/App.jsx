@@ -17,10 +17,11 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    const listingid = 17;
+    const listingid = 20;
+    // axios.get(`http://54.153.43.37:3009/gallery/${listingid}`)
     axios.get(`http://localhost:3009/gallery/${listingid}`)
       .then((res) => {
-        console.log('success');
+        console.log('good');
         const { data } = res;
         console.log(data);
         console.log('dataphotos', data[0].photos);

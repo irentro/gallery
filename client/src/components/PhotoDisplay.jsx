@@ -90,16 +90,16 @@ class PhotoDisplay extends React.Component {
             />
           </div>
         </div>
+
         <div className={styles.topContainer}>
-          <button className={[styles.topGallery, styles.shareBtn].join(' ')}>
-            <FontAwesomeIcon icon={faShareSquare} />
-            Share
+		 <button className={[styles.topGallery, styles.shareBtn].join(' ')}>
+            <FontAwesomeIcon icon={faShareSquare} /> Share
           </button>
           <button className={[styles.topGallery, styles.heartBtn].join(' ')}>
-            <FontAwesomeIcon icon={faHeart} />
-            Save
+            <FontAwesomeIcon icon={faHeart} /> Save
           </button>
         </div>
+
         <div className={styles.bottomContainer}>
           <button className={styles.viewPhotosBtn} onClick={(e) => { this.handleClick(e, 0); }}>
           View Photos
