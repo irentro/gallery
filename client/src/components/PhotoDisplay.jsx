@@ -37,6 +37,7 @@ class PhotoDisplay extends React.Component {
   };
 
   render() {
+  // Highlight  
     const { photos, showCarousel } = this.props;
     const { hovered } = this.state;
     if (!photos[0] || photos[0] === undefined) {
@@ -51,6 +52,7 @@ class PhotoDisplay extends React.Component {
         return zoom;
       });
     }
+    // End
     return (
       <div>
         <div className={styles.wrapper} onMouseOut={this.handleMouseOut} onMouseOver={this.handleMouseOn}>
